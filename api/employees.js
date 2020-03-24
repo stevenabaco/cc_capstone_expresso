@@ -113,9 +113,9 @@ employeesRouter.post('/', (req, res, next) => {
             if (error) {
                 next(error);
             } else {
-                db.get(`SELECT * FROM Employee WHERE Employee.id = ${req.params.artistId}`, 
+                db.get(`SELECT * FROM Employee WHERE Employee.id = ${req.params.employeeId}`, 
                 (error, employee) => {
-                    res.status(200).json({artist: artist});
+                    res.status(200).json({employee: employee});
                 });
             }
         });
